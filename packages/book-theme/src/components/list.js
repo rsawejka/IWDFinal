@@ -5,15 +5,20 @@ import Link from "@frontity/components/link"
 const List = ({ state }) => {
     const data = state.source.get(state.router.link)
 
+
     return (
         <div>
             {data.items.map((item) => {
                 const post = state.source[item.type][item.id]
+
+
                 return (
-                    <Link key={item.id} link={post.link}>
-                        {post.title.rendered}
-                        <br />
-                    </Link>
+                        <Link key={item.id} link={post.link}>
+                            {post.title.rendered}
+                            {state.source.attachment[item.id]}
+                            <br />
+                        </Link>
+
                 )
             })}
         </div>
