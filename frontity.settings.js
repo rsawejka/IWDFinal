@@ -23,7 +23,14 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "http://rsawejka.bitlampsites.com/wpd/wordpress/wordpressfinal/"
+          "url": "http://rsawejka.bitlampsites.com/wpd/wordpress/wordpressfinal/",
+          "postTypes": [
+            {
+              type: "books",
+              endpoint: "books",
+              archive: "/books"
+            }
+          ]
         }
       }
     },

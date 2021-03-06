@@ -2,7 +2,7 @@ import React from "react"
 import { connect } from "frontity"
 import Link from "@frontity/components/link"
 
-const Books = ({ state }) => {
+const List = ({ state }) => {
     const data = state.source.get(state.router.link)
 
     return (
@@ -20,4 +20,4 @@ const Books = ({ state }) => {
     )
 }
 
-export default connect(Books)
+export default connect(List)

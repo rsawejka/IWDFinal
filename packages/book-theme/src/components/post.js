@@ -10,7 +10,9 @@ const Post = ({ state }) => {
     const formattedDate = dayjs(post.date).format("DD MMMM YYYY")
 
     return (
+
         <div>
+
             <h2>{post.title.rendered}</h2>
             <p>
                 <strong>Posted: </strong>

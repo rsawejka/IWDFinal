@@ -2,9 +2,9 @@ import React from "react"
 import { connect } from "frontity"
 import Link from "@frontity/components/link"
 import Switch from "@frontity/components/switch"
-import Books from "./books"
 import Post from "./post"
 import Page from "./page"
+import List from "./list"
 
 
 const Root = ({ state }) => {
@@ -16,20 +16,21 @@ const Root = ({ state }) => {
             <p>Current URL: {state.router.link}</p>
 
             <nav>
-                <Link link="/">Home</Link>
+                <Link link="/">Home /need wordpress home page here/</Link>
                 <br />
-                <Link link="/page/books-martin-likes">Books Martin
+                <Link link="/books-martin-likes/">Books Martin
                 likes</Link>
                 <br />
-                <Link link="/page/all-books">All Books</Link>
+                <Link link="/books/">All Books</Link>
             </nav>
 
             <hr />
             <main>
                 <Switch>
-                    <Books when={data.isArchive}>This is a list</Books>
+                    <List when={data.isArchive} />
                     <Post when={data.isPost} />
                     <Page when={data.isPage} />
+                    <Page when={data.isBooks} />
                 </Switch>
             </main>
         </>
