@@ -10,14 +10,26 @@ const List = ({ state }) => {
         <div>
             {data.items.map((item) => {
                 const post = state.source[item.type][item.id]
+                const mediaKey = post.featured_media
+
+
+
 
 
                 return (
                         <Link key={item.id} link={post.link}>
                             {post.title.rendered}
-                            {state.source.attachment[item.id]}
-                            <br />
+
+                            <img src={state.source.attachment[mediaKey].source_url} />
+
+
+
+
                         </Link>
+
+
+
+
 
                 )
             })}
