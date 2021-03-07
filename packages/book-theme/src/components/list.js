@@ -17,7 +17,7 @@ const List = ({ state }) => {
 
 
                 return (
-                        <Link key={item.id} link={post.link}>
+                        <Link  key={item.id} link={post.link}>
                             {post.title.rendered}
 
                             <img src={state.source.attachment[mediaKey].source_url} />
