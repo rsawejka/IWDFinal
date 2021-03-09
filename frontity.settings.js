@@ -23,6 +23,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
+          "homepage": "home-page",
           "url": "http://rsawejka.bitlampsites.com/wpd/wordpress/wordpressfinal/",
           "postTypes": [
             {
