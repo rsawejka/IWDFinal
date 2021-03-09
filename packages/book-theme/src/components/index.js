@@ -1,5 +1,5 @@
 import React from "react"
-import { connect, styled  } from "frontity"
+import { connect, styled, Global, css } from "frontity"
 import Link from "@frontity/components/link"
 import Switch from "@frontity/components/switch"
 import Post from "./post"
@@ -14,19 +14,42 @@ const Root = ({ state}) => {
 
     return (
         <>
-          <div>
-              <nav>
+            <Global
+                styles={css`
+              
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+          html {
+            font-family: system-ui, Verdana, Arial, sans-serif;
+            line-height: 1.5;
+          }
+          .wrapper{
+          margin: 0 auto;
+          width: 60%;
+          }
+        `}
+            />
+          <Flex>
+
+              <Nav>
                   <Link link="/">Home</Link>
                   <br />
-                  <Link link="/books-martin-likes/">Books Martin
-                      likes</Link>
+                  <Link link="/books-martin-likes/">Books Martin likes</Link>
                   <br />
                   <Link link="/books/">All Books</Link>
-              </nav>
+
+              </Nav>
+              <Redbar></Redbar>
 
 
-          </div>
 
+          </Flex>
+
+
+<div className="wrapper">
 
 
             <main>
@@ -38,15 +61,37 @@ const Root = ({ state}) => {
                     <Book when={data.isBooks} />
                 </Switch>
             </main>
+</div>
         </>
     )
 }
 
 
 export default connect(Root)
+const Flex = styled.div`
+display: flex;
+`
+const Nav = styled.nav`
+    
+    background-color: #404040;
+    display: flex;
+    width: 60%;
+    
+    a{
+    color: #EC625F;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 1.4em;
+    }
+    a:hover{
+    color: white;
+    }
+    div{
+    background-color: #EC625F; 
+    }
+`
 
-const nav = styled.nav`
-  nav{
-  background-color: black;
-  }
+const Redbar = styled.div`
+background-color: #EC625F;
+width: 40%;
 `
