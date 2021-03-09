@@ -72,7 +72,7 @@ const Flex = styled.div`
 display: flex;
 `
 const Nav = styled.nav`
-    
+    padding-left: 40px;
     background-color: #404040;
     display: flex;
     width: 60%;

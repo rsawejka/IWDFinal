@@ -1,5 +1,5 @@
 import React from "react"
-import { connect } from "frontity"
+import { connect, styled } from "frontity"
 
 const Page = ({ state }) => {
     const data = state.source.get(state.router.link)
@@ -9,13 +9,41 @@ const Page = ({ state }) => {
 
 
     return (
-        <div>
+        <Pagecontent>
 
 
-            <h2>{page.title.rendered}</h2>
             <div dangerouslySetInnerHTML={{ __html: page.content.rendered }} />
-        </div>
+        </Pagecontent>
     )
 }
 
 export default connect(Page)
+
+const Pagecontent = styled.div`
+h1{
+margin-top: 40px;
+margin-bottom: 40px;
+}
+.wp-block-columns{
+display: flex;
+padding-bottom: 30px;
+padding-top: 30px;
+justify-content: space-evenly;
+margin-left: 200px;
+}
+.wp-block-columns:nth-child(2){
+width: 60%
+}
+.wp-block-columns:nth-child(1){
+
+width: 40%;
+}
+
+.wp-block-column p, .wp-block-column h2{
+margin-left: 30px;
+}
+.wp-block-column h2{
+margin-bottom: 15px;
+}
+
+`
