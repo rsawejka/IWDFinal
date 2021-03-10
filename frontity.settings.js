@@ -7,6 +7,7 @@ const settings = {
       "description": "WordPress installation for Frontity development"
     }
   },
+
   "packages": [
     {
       "name": "book-theme",
@@ -35,6 +36,7 @@ const settings = {
         }
       }
     },
+
     "@frontity/tiny-router",
     "@frontity/html2react"
   ]

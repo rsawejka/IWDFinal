@@ -9,6 +9,7 @@ import Book from "./book"
 import Home from "./home"
 import Loading from "./loading"
 import Error from "./error"
+import Footer from "./footer"
 
 
 const Root = ({ state}) => {
@@ -66,6 +67,7 @@ const Root = ({ state}) => {
                 </Switch>
             </main>
 </div>
+            <Footer />
         </>
     )
 }

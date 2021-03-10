@@ -1,10 +1,12 @@
 import React from "react"
 import { connect, styled } from "frontity"
 
-const Book = ({ state }) => {
+const Book = ({ state, libraries }) => {
     const data = state.source.get(state.router.link)
     const book = state.source[data.type][data.id]
     const mediaKey = book.featured_media
+
+    const Html2React = libraries.html2react.Component
 
 
 
@@ -16,7 +18,7 @@ const Book = ({ state }) => {
             </div>
             <div className="right">
                 <h2>{book.title.rendered}</h2>
-                <div dangerouslySetInnerHTML={{ __html: book.content.rendered }} />
+                <Html2React html={book.content.rendered} />
             </div>
 
         </Bookinfo>
