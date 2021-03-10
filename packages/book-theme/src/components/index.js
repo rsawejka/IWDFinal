@@ -7,6 +7,7 @@ import Page from "./page"
 import List from "./list"
 import Book from "./book"
 import Home from "./home"
+import Loading from "./loading"
 
 
 const Root = ({ state}) => {
@@ -55,6 +56,7 @@ const Root = ({ state}) => {
             <main>
                 <Switch>
                     <Home when={data.isHome} />
+                    <Loading when={data.isFetching} />
                     <List when={data.isBooksArchive} />
                     <Post when={data.isPost} />
                     <Page when={data.isPage} />
