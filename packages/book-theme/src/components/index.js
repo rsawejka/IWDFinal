@@ -8,6 +8,7 @@ import List from "./list"
 import Book from "./book"
 import Home from "./home"
 import Loading from "./loading"
+import Error from "./error"
 
 
 const Root = ({ state}) => {
@@ -61,6 +62,7 @@ const Root = ({ state}) => {
                     <Post when={data.isPost} />
                     <Page when={data.isPage} />
                     <Book when={data.isBooks} />
+                    <Error when={data.isError} />
                 </Switch>
             </main>
 </div>
