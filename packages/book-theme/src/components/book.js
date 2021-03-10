@@ -1,5 +1,5 @@
 import React from "react"
-import { connect, styled } from "frontity"
+import { connect, styled, Head  } from "frontity"
 
 const Book = ({ state, libraries }) => {
     const data = state.source.get(state.router.link)
@@ -12,6 +12,14 @@ const Book = ({ state, libraries }) => {
 
 
     return (
+        <div>
+
+
+
+        <Head>
+            <title>{book.title.rendered}</title>
+
+        </Head>
         <Bookinfo>
             <div className="left">
                 <img src={state.source.attachment[mediaKey].source_url} />
@@ -22,6 +30,7 @@ const Book = ({ state, libraries }) => {
             </div>
 
         </Bookinfo>
+        </div>
     )
 }
 

@@ -1,5 +1,5 @@
 import React from "react"
-import { connect, styled, Global, css } from "frontity"
+import { connect, styled, Global, css, Head } from "frontity"
 import Link from "@frontity/components/link"
 import Switch from "@frontity/components/switch"
 import Post from "./post"
@@ -17,6 +17,13 @@ const Root = ({ state}) => {
 
     return (
         <>
+            <Head>
+                <title>Frontity Book Theme</title>
+                <meta
+                    name="description"
+                    content="Based on the Frontity step by step tutorial"
+                />
+            </Head>
             <Global
                 styles={css`
               
