@@ -18,13 +18,6 @@ const List = ({ state }) => {
                             <div className="title">{post.title.rendered}</div>
                         </Link>
                     </BookTile>
-
-
-
-
-
-
-
                 )
             })}
         </AllBooks>
@@ -38,6 +31,7 @@ display: flex;
 flex-direction: row;
 justify-content: space-evenly;
 flex-wrap: wrap;
+margin-top: 20px;
 `
 const BookTile = styled.div`
 margin: 20px;
