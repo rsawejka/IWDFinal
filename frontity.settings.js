@@ -25,7 +25,7 @@ const settings = {
       "state": {
         "source": {
           "homepage": "home-page",
-          "url": "http://rsawejka.bitlampsites.com/wpd/wordpress/wordpressfinal/",
+          "url": "https://rsawejka.bitlampsites.com/wpd/wordpress/wordpressfinal/",
           "postTypes": [
             {
               type: "books",
