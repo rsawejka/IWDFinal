@@ -4,7 +4,7 @@ import { connect } from "frontity"
 const Error = ({ state }) => {
     return (
         <>
-            <h2>404 Error</h2>
+            <h2>404 Errorrr</h2>
             <p>
                 The path <em>{state.router.link}</em> cannot be found.
             </p>
