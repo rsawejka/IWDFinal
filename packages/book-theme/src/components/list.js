@@ -32,6 +32,7 @@ flex-direction: row;
 justify-content: space-evenly;
 flex-wrap: wrap;
 margin-top: 20px;
+
 `
 const BookTile = styled.div`
 margin: 20px;
@@ -40,5 +41,8 @@ a .title{
 color: black;
 text-decoration: none;
 text-align: center;
+}
+a{
+    text-decoration: none;
 }
 `

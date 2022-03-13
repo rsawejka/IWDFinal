@@ -77,4 +77,60 @@ color: white;
 .reviewBox h3{
 margin-bottom: 10px;
 }
+table{
+	border-collapse: collapse;
+	width: 100%;
+	margin-bottom: 20px;
+
+
+}
+table tr:nth-child(1){
+	background-color: #EC625F;
+
+}
+
+table h3{
+	color: white;
+	padding-top: 8px;
+	font-size: 1.3em;
+}
+table tr td{
+	border-bottom: 2px solid black;
+	padding: 10px;
+	border-radius: 8px 8px 0px 0px;
+}
+
+
+.reviewFlex{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.card {
+	color: white;
+	width: 48%;
+	border-radius: 10px;
+	padding: 15px;
+	margin-top: 8px;
+	background-color: #EC625F;
+
+
+}
+.reviewCard{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+
+}
+.rating{
+	margin-bottom: 20px;
+}
+.reviewLink{
+    display: none;
+}
+.rating{
+    display: none
+}
 `
