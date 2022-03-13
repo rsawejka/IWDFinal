@@ -10,7 +10,6 @@ const Home = ({ state, libraries }) => {
 
     return (
         <Homecontent>
-            <div>yaao</div>
             <Html2React html={home.content.rendered } />
         </Homecontent>
     )
@@ -23,11 +22,10 @@ const Homecontent = styled.div`
     font-size: 2em;
     margin-top: 21px;
     margin-bottom: 21px;
+    }
+
     
-    }
-    p{
-        color: orange;
-    }
+  
     h3{
     font-size: 1.17em;
     margin-bottom: 15px;
