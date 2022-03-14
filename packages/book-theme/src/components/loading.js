@@ -1,7 +1,7 @@
 import React from "react"
 import { styled, keyframes } from "frontity"
 
-const Loading = () => <Spinner />
+const Loading = () => <SpinnerContainer><Spinner /></SpinnerContainer>
 
 export default Loading
 
@@ -17,4 +17,8 @@ const Spinner = styled.div`
   width: 80px;
   height: 80px;
   animation: ${spin} 2s linear infinite;
+`
+const SpinnerContainer = styled.div`
+margin-top: 100px;
+margin-left: 500px;
 `
